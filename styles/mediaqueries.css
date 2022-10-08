@@ -255,6 +255,12 @@
     .container-contacto-ubi iframe{
         width: 350px;
     }
+    .container-contacto-redes{
+        width: 100%;
+    }
+    .redes a{
+        padding: 10px 30px;
+    }
 
     
 }
