@@ -103,9 +103,15 @@
         border-radius: 0px 0px 15px 15px;
         gap: 80px;  
         display: none;
+        overflow-y: scroll;
         animation: translateX 0.5s ease-in-out alternate;
-        
+ 
     }
+    .navbar-list::-webkit-scrollbar
+{
+    display: none;
+}
+
     .navbar-list a
     {
         font-size: 30px;
@@ -236,6 +242,18 @@
     .card-godzilla{
         padding: 5px;
     }
+}
+
+@media (max-width: 450px) {
+
+    .card-godzilla img{
+        height: 150px;
+    }
+    .container-contacto-ubi iframe{
+        width: 350px;
+    }
+
+    
 }
 
     
