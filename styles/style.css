@@ -1,0 +1,742 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@font-face
+{
+    font-family: Godzilla;
+    src: url(./Godzilla.ttf) format("truetype");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root
+{
+    --background: #16161a;
+    --background-2: #242629;
+    --button: #7f5af0;
+    --button-2: #ff8906;
+    --white: #fffffe;
+    --green: #2cb67d;
+    --red: #f14141;
+    --yellow: #fde235;
+    --green-aqua: #9fffcb;
+    --blue-aqua: #48cae4;
+}
+
+header img
+{
+    height: 50px;
+    padding-left: 20px;
+}
+header
+{
+    background: #0c0f0a;
+    height: 90px;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 3;
+}
+.navbar,.navbar-list
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar
+{
+    margin-right: 40px;
+    gap: 30px;
+}
+.navbar-list
+{  
+    list-style: none;
+    gap: 30px;
+}
+.navbar-list a
+{
+    color: var(--white);
+    font-family: 'Creepster', cursive;
+    font-family: 'Bungee Spice', cursive;
+    font-size: 15px;
+}
+.shop
+{
+    color: var(--button-2);
+    font-size: 20px;
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
+.menu-label,#menu-toggle
+{
+    display: none;
+}
+
+#cart-items
+{
+    display: none;
+}
+
+.cart{
+    position: absolute;
+    top: 90px;
+    right: 0;
+    padding: 60px 30px;
+    background: linear-gradient(to bottom, #0c0f0a, var(--background-2));
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: calc(100vh - 65px);
+    overflow-y: scroll;
+    display: none;
+    z-index: 2;
+}
+
+.cart::-webkit-scrollbar
+{
+    display: none;
+}
+
+.cart h2
+{
+    color: var(--green);
+    font-family: 'Rubik Distressed', cursive;
+    text-align: center;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.cart-item
+{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: #242629;
+    padding: 20px 30px;
+    border-radius: 15px;
+}
+
+.cart-item img
+{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.item-info
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Montserrat", cursive;
+}
+
+.item-title
+{
+    color: var(--red);
+    font-weight: 800;
+    font-size: 16px;
+}
+.item-bid
+{
+    color: var(--white);
+    font-weight: 300;
+    font-size: 14px;
+}
+.item-price
+{
+    font-family: 'Bungee Spice', cursive;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.item-handler{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.quantity-handler{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-family: 'Bungee Spice', cursive;
+    font-weight: 400;
+}
+.item-quantity{
+    font-family: 'Bungee Spice', cursive;
+}
+.down{
+    background-color: var(--yellow);
+    border: 1px solid var(--button-2);
+    cursor: pointer;
+}
+.up{
+    background-color: var(--yellow);
+    border: 1px solid var(--button-2);
+    cursor: pointer;
+}
+.divider{
+    margin-top: 20px;
+    border: 0.5px solid var(--red);
+}
+.cart-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.cart-total p{
+    color: var(--white);
+    font-family: "Montserrat", cursive;
+    font-weight: 700;
+}
+.cart-total span{
+    font-family: 'Bungee Spice', cursive;
+    font-weight: 400;
+    font-size: 18px;
+}  
+
+#cart-items:checked + .cart
+{
+    display: flex;
+}
+
+
+.overlay
+{
+    position: absolute;
+    top: 65px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: none;
+}
+#cart-items:checked +.overlay
+{
+    display: flex;
+}
+#menu-toggle:checked + .overlay
+{
+    display: block;
+}
+
+
+
+
+main
+{
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero
+{
+    display: flex;
+    flex-direction: column;
+    background: url(https://giffiles.alphacoders.com/210/210021.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+}
+
+.hero-titulo
+{
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+
+}
+.hero-titulo h1
+{
+    font-size: 80px;
+    font-family: 'Holtwood One SC', serif;
+    color: var(--red);
+    padding-top: 50px;
+    animation: 1.5s transparent ease-in-out;
+}
+.container-scroll
+{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    padding: 0px 100px ;
+}
+.scroll
+{
+    font-size: 50px;
+    color:var(--red);
+    animation: translateY 0.6s infinite alternate;
+}
+#info
+{
+    display: flex;
+    background: var(--background-2);
+    background: url(https://img.freepik.com/fotos-premium/fondo-textura-piedra-pizarra-negra-gris-oscuro_44706-879.jpg?w=2000);
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 40px;
+}
+.info-top
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.info-top h3
+{
+    font-family: 'Holtwood One SC', serif;
+    font-family: 'Rubik Dirt', cursive;
+    font-family: 'Rubik Distressed', cursive;
+    color: var(--green);
+    font-size: 45px;
+    font-weight: 400;
+    text-align: center; 
+}
+.info-top p
+{
+    color: var(--white);
+    font-size: 20px;
+    text-align: center;
+    font-family: "Montserrat", cursive;
+    font-weight: 600;
+    width: 85%;
+}
+.info-bottom
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+}
+.card-godzilla
+{
+    background-color: #0c0f0a;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 15px;
+    gap: 20px;
+
+}
+.card-godzilla img
+{
+    height: 250px;
+    border-radius: 15px;
+}
+
+.card-info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-info h4
+{
+    font-family: 'Rubik Distressed', cursive;
+    color: var(--green);
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+.card-info-text
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    font-family: "Montserrat", cursive;
+    font-size: 20px;
+    color: var(--white);
+    text-align: center;
+}
+.card-info-history
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.card-info-history h4
+{
+    font-family: 'Rubik Distressed', cursive;
+    color: var(--green);
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+.info-history
+{
+    font-family: "Montserrat", cursive;
+    font-size: 15px;
+    text-align: justify;
+    color: var(--white);
+}
+
+#villanos
+{
+    background: var(--background-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    gap: 40px;
+}
+#villanos h2
+{
+    display: flex;
+    justify-content: center;
+    font-family: 'Rubik Distressed', cursive;
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--green);
+}
+.container-cards
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--background);
+    border-radius: 15px;
+    gap: 10px;
+}
+.card img
+{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+.card h4
+{
+    font-family: 'Rubik Distressed', cursive;
+    color: var(--button);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 10px;
+}
+.info-card-enemy
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.info-card-enemy p
+{
+    color: var(--white);
+    font-family: "Montserrat", cursive;
+    font-size: 15px;
+}
+.info-card-enemy h4
+{
+    letter-spacing: 0px;
+    text-align: start;
+    color: var(--green);
+}
+#productos
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:var(--background-2);
+    padding: 40px 0px;
+    gap: 50px;
+}
+#productos h2
+{
+    color: var(--green);
+    font-family: 'Rubik Distressed', cursive;
+    font-weight: 400;
+    font-size: 40px;
+}
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.category img
+{
+    height: 70px;
+    width: 70px;
+}
+.category
+{
+    border: none;
+    padding: 5px 60px;
+    cursor: pointer;
+    background: var(--background);
+    border-radius: 15px;
+    animation: translateX ease-in-out 1.5s;
+}
+
+.monsters:hover
+{
+    background: var(--white);
+}
+.godzilla:hover
+{
+    background: var(--blue-aqua);
+}
+.mothra:hover
+{
+    background:var(--green-aqua);
+}
+
+.ghidora:hover
+{
+    background: var(--yellow);
+}
+.rodan:hover
+{
+    background: var(--red);
+}
+.kong:hover
+{
+    background: var(--button-2);
+}
+
+.container-productos
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+   
+}
+.card-product
+{
+    background:var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 15px;
+    gap: 20px;
+}
+.card-product img
+{
+    height: 400px;
+    width: 360px;
+    border-radius: 15px;
+}
+.product-info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.product-info h4
+{
+    font-family: 'Rubik Distressed', cursive;
+    color: var(--button);
+    font-weight: 400;
+    letter-spacing: 12px;
+}
+.product-info p
+{
+    color: gray;
+    font-family: "Montserrat", cursive;
+}
+.product-info-buy
+{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-info-buy p
+{
+    font-family: 'Bungee Spice', cursive;
+}
+.product-info-buy button{
+    padding: 10px;
+    border-radius: 15px;
+    border-style: none;
+    font-weight: 400;
+    font-family: 'Holtwood One SC', serif;
+    font-weight: 800;
+    background:linear-gradient(to bottom,var(--yellow),#fb5607);
+    cursor: pointer;
+}
+
+.contacto
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(to bottom,var(--background-2),#0c0f0a);
+    gap: 40px;
+    padding: 10px 50px;
+}
+.contacto h2
+{
+    color: var(--green);
+    font-family: 'Rubik Distressed', cursive;
+    font-weight: 400;
+    font-size: 40px;
+}
+.container-contacto{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+.container-contacto-redes
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+   /* background: var(--background);
+    border-radius: 15px;*/
+}
+.container-contacto-redes h4{
+    color: var(--button);
+    font-family: 'Rubik Distressed', cursive;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+}
+.redes
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.redes a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fffffe;
+    background-color: var(--yellow);
+    padding: 5px 100px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.container-contacto-redes p
+{
+    color: var(--white);
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Rubik Distressed', cursive;
+}
+.redes a:hover
+{
+    background-color: var(--button);
+    transition: all 0.5s;
+}
+
+footer
+{
+    background-color: #0c0f0a;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px;
+    font-size: 20px;
+    font-family: "Montserrat", cursive;
+    gap: 30px;
+}
+.footer-span-p
+{
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.separador
+{
+    width: 100%;
+    border-style: solid;
+    color: #f14141;
+}
+
+@keyframes transparent {
+    from
+    {
+        transform: scale(0);
+    }
+    to
+    {
+        transform: scale(1);
+    }
+}
+
+@keyframes translateX {
+    from
+    {
+        transform: translateX(-1200px);
+    }
+    to
+    {
+        transform: translateX(0px);
+    } 
+}
+@keyframes translateY {
+    from
+    {
+        transform: translateY(30px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+    
+}
+
+
+
+
+

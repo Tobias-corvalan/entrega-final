@@ -1,0 +1,97 @@
+header
+{
+    justify-content: center;
+    align-items: center;
+}
+
+main
+{
+    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6e9e96e4-b8e9-46f8-84cc-e329d41dfa2f/ddgko3b-8bf0a5a0-15ae-419d-9f18-98870aa97fe1.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZlOWU5NmU0LWI4ZTktNDZmOC04NGNjLWUzMjlkNDFkZmEyZlwvZGRna28zYi04YmYwYTVhMC0xNWFlLTQxOWQtOWYxOC05ODg3MGFhOTdmZTEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.CmCWSbNmqNwOcEGw52nfu4jyKFp6Qnp3Pmip2kp0GGI);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color:var(--white);
+    font-family: 'Rubik Distressed', cursive;
+}
+
+.container-form
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 30px;
+    gap: 50px;
+    animation: transparent 1s ease-in-out;
+    
+}
+.form-top
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.form-top h2
+{
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--green);
+}
+.form-top p
+{
+    font-family: "Montserrat", cursive;
+    font-weight: 800;
+}
+.formulario
+{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.formulario input
+{
+    padding: 25px 30px;
+    border-radius: 25px;
+    text-align: center;
+    font-family: 'Bungee Spice', cursive;
+    background-color: var(--background);
+    outline: none;
+    border-color: orange;
+}
+.formulario p
+{
+    font-family: "Montserrat", cursive;
+    font-weight: 800;
+    text-align: center;
+}
+.formulario a
+{
+    color: red;
+}
+.formulario a:visited{
+    color: red;
+}
+#enviar
+{
+    padding: 15px 20px;
+    background-color: var(--button);
+    border: none;
+    cursor: pointer;
+}
+
+main span
+{
+    border: 5px solid red;
+    width: 100%;
+    position: relative;
+    bottom: 65px;
+}
+footer
+{
+    background: #000000;
+}
