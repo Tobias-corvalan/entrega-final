@@ -257,7 +257,7 @@ main
 {
     display: flex;
     flex-direction: column;
-    background: url(https://giffiles.alphacoders.com/210/210021.gif);
+    background: url(../assets/fondo-hero.gif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
