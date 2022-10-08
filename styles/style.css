@@ -40,7 +40,7 @@ header img
 }
 header
 {
-    background: #0c0f0a;
+    background: #000000;
     height: 90px;
     color: var(--white);
     display: flex;
@@ -220,7 +220,7 @@ header
     display: flex;
 }
 
-
+/*
 .overlay
 {
     position: absolute;
@@ -234,6 +234,7 @@ header
     -webkit-backdrop-filter: blur(5px);
     display: none;
 }
+
 #cart-items:checked +.overlay
 {
     display: flex;
@@ -242,7 +243,14 @@ header
 {
     display: block;
 }
-
+*/
+.btn-add{
+    background:linear-gradient(to bottom,var(--yellow),#fb5607);
+    font-family: 'Holtwood One SC', serif;
+    border-radius: 15px;
+    border-style: none;
+    cursor: pointer;
+}
 
 
 
