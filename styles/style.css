@@ -12,6 +12,7 @@
     src: url(./Godzilla.ttf) format("truetype");
 }
 
+
 *{
     padding: 0;
     margin: 0;
@@ -32,7 +33,7 @@
     --green-aqua: #9fffcb;
     --blue-aqua: #48cae4;
 }
-
+/*ESTILOS DEL HEADER Y NAVBAR*/
 header img
 {
     height: 50px;
@@ -81,7 +82,9 @@ header
     padding-bottom: 8px;
     cursor: pointer;
 }
+/*ESTILOS DEL HEADER Y NAVBAR*/
 
+/*ESTILOS DEL CARRITO*/
 .menu-label,#menu-toggle
 {
     display: none;
@@ -251,16 +254,16 @@ header
     border-style: none;
     cursor: pointer;
 }
+/*ESTILOS DEL CARRITO*/
 
-
-
+/*COMIENZA MAIN*/
 main
 {
     padding-top: 90px;
     display: flex;
     flex-direction: column;
 }
-
+/*ESTILOS DE LA SECCION HERO*/
 .hero
 {
     display: flex;
@@ -304,6 +307,9 @@ main
     color:var(--red);
     animation: translateY 0.6s infinite alternate;
 }
+/*ESTILOS DE LA SECCION HERO*/
+
+/*ESTILOS DE LA SECCION INFO*/
 #info
 {
     display: flex;
@@ -415,7 +421,10 @@ main
     text-align: justify;
     color: var(--white);
 }
+/*ESTILOS DE LA SECCION INFO*/
 
+
+/*ESTILOS DE LA SECCION INFO VILLANOS*/
 #villanos
 {
     background: var(--background-2);
@@ -483,6 +492,9 @@ main
     text-align: start;
     color: var(--green);
 }
+/*ESTILOS DE LA SECCION INFO VILLANOS*/
+
+/*ESTILOS DE LA SECCION CATEGORIA Y PRODUCTOS*/
 #productos
 {
     display: flex;
@@ -613,7 +625,9 @@ main
     background:linear-gradient(to bottom,var(--yellow),#fb5607);
     cursor: pointer;
 }
+/*ESTILOS DE LA SECCION CATEGORIA Y PRODUCTOS*/
 
+/*ESTILOS DE LA SECCION CONTACTO*/
 .contacto
 {
     display: flex;
@@ -635,7 +649,6 @@ main
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    width: 100%;
 }
 .container-contacto-redes
 {
@@ -685,7 +698,9 @@ main
     background-color: var(--button);
     transition: all 0.5s;
 }
+/*ESTILOS DE LA SECCION CONTACTO*/
 
+/*ESTILOS DEL FOOTER*/
 footer
 {
     background-color: #0c0f0a;
@@ -715,6 +730,10 @@ footer p{
     color: #f14141;
 }
 
+/*ESTILOS DEL FOOTER*/
+
+
+/*ANIMACIONES UTILIZADAS*/
 @keyframes transparent {
     from
     {
