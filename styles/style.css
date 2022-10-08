@@ -691,6 +691,9 @@ footer
     font-family: "Montserrat", cursive;
     gap: 30px;
 }
+footer p{
+    text-align: center;
+}
 .footer-span-p
 {
     font-weight: 800;
