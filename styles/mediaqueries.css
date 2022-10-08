@@ -208,7 +208,6 @@
         font-size: 60px ;
     }
     
-    
     .categories{
         gap: 20px;
     }
@@ -227,6 +226,10 @@
 }
 
 @media (max-width: 580px) {
+    .hero-titulo h1
+    {
+        font-size: 50px ;
+    }
 
     .container-contacto-ubi iframe{
         width: 450px;
@@ -247,7 +250,7 @@
 @media (max-width: 450px) {
 
     .card-godzilla img{
-        height: 150px;
+        height: 250px;
     }
     .container-contacto-ubi iframe{
         width: 350px;
